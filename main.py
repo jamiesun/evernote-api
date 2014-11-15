@@ -38,7 +38,8 @@ def filterRes(src,thumb='720mark'):
             value = value.replace(img[0], '<a href="' + img[0] + '" target="_blank"><img src="' + img[0] + '!'+ thumb +'"  /></a>')
 
         return value    
-    return _filter_img(src)
+    value = _filter_img(src)
+    return value.replace("\n","<br>")      
 
 @post('/evernote/note/create')
 def evernote_create():
