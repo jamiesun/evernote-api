@@ -39,7 +39,7 @@ def filterRes(src,thumb='720mark'):
 
         return value    
     value = _filter_img(src)
-    return value.replace("\n","<br>")      
+    return value.replace("\n","<br/>")      
 
 @post('/evernote/note/create')
 def evernote_create():
